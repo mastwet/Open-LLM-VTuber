@@ -334,10 +334,6 @@ class StatelessLLMConfigs(I18nMixin, BaseModel):
         "llama_cpp_llm": Description(
             en="Configuration for local Llama.cpp", zh="本地Llama.cpp配置"
         ),
-        "mistral_llm": Description(
-            en="Configuration for Mistral API", zh="Mistral API 配置"
-        ),
-# Descriptions for new providers
         "siliconflow_llm": Description(
             en="Configuration for SiliconFlow API", zh="SiliconFlow API 配置"
         ),
