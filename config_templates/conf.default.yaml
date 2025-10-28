@@ -295,11 +295,11 @@ character_config:
       # whisper_language: '' # Language for Whisper models (e.g., 'en', 'zh', etc. - if using Whisper)
       # whisper_task: 'transcribe'  # Task for Whisper models ('transcribe' or 'translate' - if using Whisper)
       # whisper_tail_paddings: -1   # Tail padding for Whisper models (if using Whisper)
-      blank_penalty: 0.0    # Penalty for blank symbol
-      decoding_method: 'greedy_search'  # 'greedy_search' or 'modified_beam_search'
-      debug: False # Enable debug mode
-      sample_rate: 16000 # Sample rate (should match the model's expected sample rate)
-      feature_dim: 80       # Feature dimension (should match the model's expected feature dimension)
+      # blank_penalty: 0.0    # Penalty for blank symbol
+      # decoding_method: 'greedy_search'  # 'greedy_search' or 'modified_beam_search'
+      # debug: False # Enable debug mode
+      # sample_rate: 16000 # Sample rate (should match the model's expected sample rate)
+      # feature_dim: 80       # Feature dimension (should match the model's expected feature dimension)
       use_itn: True # Enable ITN for SenseVoice models (should set to False if not using SenseVoice models)
       # Provider for inference (cpu or cuda) (cuda option needs additional settings. Please check our docs)
       provider: 'cpu' 
