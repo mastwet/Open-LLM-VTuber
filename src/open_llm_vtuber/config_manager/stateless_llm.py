@@ -162,7 +162,7 @@ class GroqConfig(OpenAICompatibleConfig):
     )
 
 
-# 新增的OpenAI兼容供应商配置类
+# New OpenAI-compatible provider configuration classes
 class SiliconFlowConfig(OpenAICompatibleConfig):
     """Configuration for SiliconFlow API."""
     
