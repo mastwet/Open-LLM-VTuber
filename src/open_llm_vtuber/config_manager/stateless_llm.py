@@ -141,6 +141,23 @@ class OpenAIConfig(OpenAICompatibleConfig):
         "system", alias="interrupt_method"
     )
 
+# Extend OpenAI-compatible provider configuration classes
+
+class AliyunBailianConfig(OpenAICompatibleConfig):
+    """Configuration for Aliyun Bailian API."""
+    base_url: str = Field("https://dashscope.aliyuncs.com/compatible-mode/v1", alias="base_url")
+
+class DeepseekConfig(OpenAICompatibleConfig):
+    """Configuration for Deepseek API."""
+    base_url: str = Field("https://api.deepseek.com/v1", alias="base_url")
+
+class GroqConfig(OpenAICompatibleConfig):
+    """Configuration for Groq API."""
+
+    base_url: str = Field("https://api.groq.com/openai/v1", alias="base_url")
+    interrupt_method: Literal["system", "user"] = Field(
+        "system", alias="interrupt_method"
+    )
 
 class GeminiConfig(OpenAICompatibleConfig):
     """Configuration for Gemini API."""
@@ -152,78 +169,41 @@ class GeminiConfig(OpenAICompatibleConfig):
         "user", alias="interrupt_method"
     )
 
-
-class GroqConfig(OpenAICompatibleConfig):
-    """Configuration for Groq API."""
-
-    base_url: str = Field("https://api.groq.com/openai/v1", alias="base_url")
-    interrupt_method: Literal["system", "user"] = Field(
-        "system", alias="interrupt_method"
-    )
-
-
-# New OpenAI-compatible provider configuration classes
-class SiliconFlowConfig(OpenAICompatibleConfig):
-    """Configuration for SiliconFlow API."""
-    
-    base_url: str = Field("https://api.siliconflow.cn", alias="base_url")
-
-
-class ZhipuConfig(OpenAICompatibleConfig):
-    """Configuration for Zhipu API."""
-
-    base_url: str = Field("https://open.bigmodel.cn/api/paas/v4/", alias="base_url")
-
-
-class AliyunBailianConfig(OpenAICompatibleConfig):
-    """Configuration for Aliyun Bailian API."""
-    
-    base_url: str = Field("https://dashscope.aliyuncs.com/compatible-mode/v1", alias="base_url")
-
+class MinimaxConfig(OpenAICompatibleConfig):
+    """Configuration for Minimax API."""
+    base_url: str = Field("https://api.minimax.chat/v1", alias="base_url")
 
 class MoonshotConfig(OpenAICompatibleConfig):
     """Configuration for Moonshot API."""
-    
     base_url: str = Field("https://api.moonshot.cn/v1", alias="base_url")
-
-
-class OpenRouterConfig(OpenAICompatibleConfig):
-    """Configuration for OpenRouter API."""
-    
-    base_url: str = Field("https://openrouter.ai/api/v1", alias="base_url")
-
-
-class MinimaxConfig(OpenAICompatibleConfig):
-    """Configuration for Minimax API."""
-    
-    base_url: str = Field("https://api.minimax.chat/v1", alias="base_url")
-
-
-class SteepSpeedConfig(OpenAICompatibleConfig):
-    """Configuration for SteepSpeed API."""
-    
-    base_url: str = Field("https://api.stepfun.com/v1", alias="base_url")
-
-
-class VolcEngineConfig(OpenAICompatibleConfig):
-    """Configuration for VolcEngine API."""
-    
-    base_url: str = Field("https://ark.cn-beijing.volces.com/api/v3", alias="base_url")
-
-
-class DeepseekConfig(OpenAICompatibleConfig):
-    """Configuration for Deepseek API."""
-
-    base_url: str = Field("https://api.deepseek.com/v1", alias="base_url")
-
 
 class MistralConfig(OpenAICompatibleConfig):
     """Configuration for Mistral API."""
-
     base_url: str = Field("https://api.mistral.ai/v1", alias="base_url")
     interrupt_method: Literal["system", "user"] = Field(
         "user", alias="interrupt_method"
     )
+
+class OpenRouterConfig(OpenAICompatibleConfig):
+    """Configuration for OpenRouter API."""
+    base_url: str = Field("https://openrouter.ai/api/v1", alias="base_url")
+
+class SiliconFlowConfig(OpenAICompatibleConfig):
+    """Configuration for SiliconFlow API."""
+    base_url: str = Field("https://api.siliconflow.cn", alias="base_url")
+
+class SteepSpeedConfig(OpenAICompatibleConfig):
+    """Configuration for SteepSpeed API."""
+    base_url: str = Field("https://api.stepfun.com/v1", alias="base_url")
+
+class VolcEngineConfig(OpenAICompatibleConfig):
+    """Configuration for VolcEngine API."""
+    base_url: str = Field("https://ark.cn-beijing.volces.com/api/v3", alias="base_url")
+
+class ZhipuConfig(OpenAICompatibleConfig):
+    """Configuration for Zhipu API."""
+    base_url: str = Field("https://open.bigmodel.cn/api/paas/v4/", alias="base_url")
+
 
 
 class ClaudeConfig(StatelessLLMBaseConfig):
