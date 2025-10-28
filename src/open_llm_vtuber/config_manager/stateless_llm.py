@@ -337,7 +337,7 @@ class StatelessLLMConfigs(I18nMixin, BaseModel):
         "mistral_llm": Description(
             en="Configuration for Mistral API", zh="Mistral API 配置"
         ),
-        # 新增供应商的描述
+# Descriptions for new providers
         "siliconflow_llm": Description(
             en="Configuration for SiliconFlow API", zh="SiliconFlow API 配置"
         ),
