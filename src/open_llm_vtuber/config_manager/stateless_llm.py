@@ -293,7 +293,7 @@ class StatelessLLMConfigs(I18nMixin, BaseModel):
     llama_cpp_llm: LlamaCppConfig | None = Field(None, alias="llama_cpp_llm")
     mistral_llm: MistralConfig | None = Field(None, alias="mistral_llm")
     
-    # 新增的OpenAI兼容供应商配置
+# New OpenAI-compatible provider configurations
     siliconflow_llm: SiliconFlowConfig | None = Field(None, alias="siliconflow_llm")
     aliyun_bailian_llm: AliyunBailianConfig | None = Field(None, alias="aliyun_bailian_llm")
     moonshot_llm: MoonshotConfig | None = Field(None, alias="moonshot_llm")
